@@ -1,0 +1,30 @@
+[package]
+name = "sci-file"
+version = "0.1.0"
+edition = "2024"
+authors = ["Tim"]
+description = "Tiny library providing simple interface for reading and writing CSV, JSON, JSONL formats with serde."
+readme = "README.md"
+licence = "AGPL-3.0-or-later"
+
+[dependencies]
+csv = "1.3.1"
+serde = {version = "1.0.215", features = ["derive"]}
+serde-jsonlines = "0.6.0"
+serde_json = "1.0.133"
+thiserror = "2.0.6"
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_debug_implementations = "deny"
+#missing_docs = "deny"
+trivial_casts = "deny"
+trivial_numeric_casts = "deny"
+unused_extern_crates = "deny"
+unused_import_braces = "deny"
+unused_qualifications = "deny"
+unused_results = "deny"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
